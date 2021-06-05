@@ -18,10 +18,23 @@
 
 <script>
 import HeaderNav from './header-nav'
+// 因为需要在这个组件的模板区域使用vuex的分类数据
+// 有必要在这个组件中触发action函数 从而获取接口数据
+import { onMounted } from 'vue'
+// 1.从vuex中导入一个函数 useStore 返回值就是一个store实例对象
+import { useStore } from 'vuex'
 export default {
   name: 'AppHeader',
   components: {
     HeaderNav
+  },
+  setup () {
+    const store = useStore()
+    onMounted(() => {
+      // 触发action函数的执行
+      // 如何在setup函数中拿到store实例从而调用它身上的方法
+      store.dispatch('category/asyncSetList')
+    })
   }
 }
 </script>

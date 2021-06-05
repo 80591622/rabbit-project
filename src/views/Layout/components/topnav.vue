@@ -2,10 +2,16 @@
   <nav class="app-topnav">
     <div class="container">
       <ul>
-        <li><a href="javascript:;"><i class="iconfont icon-user"></i>周杰伦</a></li>
-        <li><a href="javascript:;">退出登录</a></li>
-        <li><a href="javascript:;">请先登录</a></li>
-        <li><a href="javascript:;">免费注册</a></li>
+        <!-- 通过token来判断登陆或未登录状态 -->
+        <template v-if="$store.state.user.token">
+          <li><a href="javascript:;"><i class="iconfont icon-user"></i>周杰伦</a></li>
+          <li><a href="javascript:;">退出登录</a></li>
+        </template>
+        <!-- 未登录状态 -->
+        <template v-else>
+          <li><a href="javascript:;">请先登录</a></li>
+          <li><a href="javascript:;">免费注册</a></li>
+        </template>
         <li><a href="javascript:;">我的订单</a></li>
         <li><a href="javascript:;">会员中心</a></li>
         <li><a href="javascript:;">帮助中心</a></li>
