@@ -27,7 +27,7 @@ const instance = axios.create({
 // 全局注入token
 instance.interceptors.request.use(config => {
   // 1. 获取token
-  const { token } = store.state.user.profile
+  const { token } = store.state.user
   // 2. 请求头设置token
   if (token) config.headers.Authorization = `Bearer ${token}`
   return config

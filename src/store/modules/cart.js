@@ -12,9 +12,8 @@ const cart = {
   // 异步请求
   actions: {
   },
-  // 数据模块
-  modules: {
-  }
+  // 计算模块
+  getters: {}
 }
 
 export default cart

@@ -1,9 +1,8 @@
 <template>
-  <div >
-  </div>
+  <!-- 一级路由挂载点 -->
   <router-view/>
 </template>
 
-<style lang="scss">
+<style lang="less">
 
 </style>

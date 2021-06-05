@@ -1,6 +1,7 @@
 import { createStore, createLogger } from 'vuex'
 import user from './modules/user'
 import cart from './modules/cart'
+import category from './modules/category'
 // 导入持久化插件 查看 mataion 数据的改变
 import createPersistedstate from 'vuex-persistedstate'
 
@@ -8,12 +9,14 @@ export default createStore({
   state: {
   },
   mutations: {
+
   },
   actions: {
   },
   modules: {
     user,
-    cart
+    cart,
+    category
   },
   // 持久化插件配置项
   plugins: [
