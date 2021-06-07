@@ -1,4 +1,5 @@
 <template>
+<!-- 分类列表 -->
   <div class="home-category">
     <!-- 正式数据 -->
     <template v-if="list.length>0">
