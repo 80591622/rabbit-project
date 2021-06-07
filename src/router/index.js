@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 const Layout = () => import('@/views/Layout')
 const Home = () => import('@/views/Home/index')
+const Play = () => import('@/views/Playground/index')
 
 const routes = [
   {
@@ -9,6 +10,10 @@ const routes = [
     children: [
       { path: '/', component: Home }
     ]
+  },
+  {
+    path: '/Play',
+    component: Play
   }
 ]
 
