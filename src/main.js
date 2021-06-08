@@ -11,6 +11,9 @@ import componentPlugin from '@/components'
 // createApp 可执行方法用来创建一个 vue 实例对象
 // 当我们使用use方法注册插件的时候 app实例对象会被当做一个实参传入到
 // 定义插件的install方法中去
-createApp(App).use(store).use(router).use(componentPlugin).mount('#app')
+// 注册全局自定义指令
+import directivesPlugin from './directives'
+
+createApp(App).use(store).use(router).use(componentPlugin).use(directivesPlugin).mount('#app')
 
 // store.commit('user/setUser')

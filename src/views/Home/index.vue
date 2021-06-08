@@ -8,6 +8,10 @@
         <HomeBanner/>
         <!-- 新鲜好物 -->
         <HomeNew/>
+        <!-- 人气推荐 -->
+        <HomeHot/>
+        <!-- 产品区块组件 -->
+        <HomeProduct/>
       </div>
     </div>
   </div>
@@ -17,9 +21,13 @@ import HomeCategory from './components/home-categroy'
 import HomeBanner from './components/home-banner'
 // 新鲜好物
 import HomeNew from './components/home-new'
+// 人气推荐
+import HomeHot from './components/home-hot'
+// 产品区块组件
+import HomeProduct from './components/home-product'
 export default {
   name: 'PageHome',
-  components: { HomeCategory, HomeBanner, HomeNew }
+  components: { HomeCategory, HomeBanner, HomeNew, HomeHot, HomeProduct }
 }
 </script>
 

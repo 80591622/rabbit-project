@@ -27,3 +27,21 @@ export const findBanner = () => {
 export const findNew = () => {
   return request('home/new', 'get')
 }
+
+/**
+ * @description: 获取人气推荐
+ * @param {*}
+ * @return {*}
+ */
+export const findHot = () => {
+  return request('home/hot', 'get')
+}
+
+/**
+ * @description: 获取所有商品模块
+ * @param {*}
+ * @return {*}
+ */
+export const findGoods = () => {
+  return request('home/goods', 'get')
+}
