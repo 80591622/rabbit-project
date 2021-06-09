@@ -7,7 +7,10 @@
   <HeaderSticky/>
   <main>
     <!-- 二级路由出口 -->
-    <router-view></router-view>
+    <!-- fullPath: path + 参数
+    path: 没有参数
+    key: 1.提高列表的渲染性能   2.强制更新组件(破坏缓存机制) :key="$route.fullPath"-->
+    <router-view ></router-view>
   </main>
   <!-- 底部区域 -->
   <Footer/>

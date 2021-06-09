@@ -17,6 +17,11 @@
     </home-panel>
     <!-- 测试查看更多小组件 -->
     <XtxMore path="/login"/>
+    <!-- 测试导航面包屑 -->
+    <XtxBread separator="&nbsp;>&nbsp;">
+      <XtxBreadItem to="/">首页</XtxBreadItem>
+      <XtxBreadItem>导航</XtxBreadItem>
+    </XtxBread>
   </div>
 </template>
 <script>

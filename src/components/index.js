@@ -8,6 +8,9 @@ import Skeleton from './Skeleton'
 import Slider from './Slider'
 // 首页主体查看更多
 import More from './More'
+// 面包屑全局注册
+import Bread from './Bread/index'
+import BreadItem from './Bread/Item'
 
 export default {
   install (app) {
@@ -18,5 +21,7 @@ export default {
     app.component(Skeleton.name, Skeleton)
     app.component(Slider.name, Slider)
     app.component(More.name, More)
+    app.component(Bread.name, Bread)
+    app.component(BreadItem.name, BreadItem)
   }
 }

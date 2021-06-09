@@ -2,15 +2,16 @@
   <ul class="app-header-nav">
     <li class="home"><RouterLink to="/">首页</RouterLink></li>
     <li v-for="item in $store.state.category.list" :key="item.id">
-      <a href="#">{{item.name}}</a>
+      <RouterLink :to="`/category/${item.id}`">{{item.name}}</RouterLink>
       <!-- 放置鼠标移入显示的二级弹框 -->
       <div class="layer">
         <ul>
           <li v-for="i in item.children" :key="i.id">
-            <a href="#">
+            <!-- 二级导航 -->
+             <RouterLink :to="`/subCategory/${i.id}`">
               <img :src="i.picture" alt="">
               <p>{{i.name}}</p>
-            </a>
+            </RouterLink>
           </li>
         </ul>
       </div>

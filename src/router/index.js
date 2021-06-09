@@ -2,13 +2,16 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 const Layout = () => import('@/views/Layout')
 const Home = () => import('@/views/Home/index')
 const Play = () => import('@/views/Playground/index')
-
+const Category = () => import('@/views/Category/index')
+const SubCategory = () => import('@/views/Category/Sub/index')
 const routes = [
   {
     path: '/',
     component: Layout,
     children: [
-      { path: '/', component: Home }
+      { path: '/', component: Home },
+      { path: '/category/:id', component: Category },
+      { path: '/SubCategory/:id', component: SubCategory }
     ]
   },
   {
