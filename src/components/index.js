@@ -11,6 +11,10 @@ import More from './More'
 // 面包屑全局注册
 import Bread from './Bread/index'
 import BreadItem from './Bread/Item'
+// 加载更多组件
+import InfiniteLoad from './InfiniteLoad'
+// 城市组件
+import City from './City'
 
 export default {
   install (app) {
@@ -23,5 +27,7 @@ export default {
     app.component(More.name, More)
     app.component(Bread.name, Bread)
     app.component(BreadItem.name, BreadItem)
+    app.component(InfiniteLoad.name, InfiniteLoad)
+    app.component(City.name, City)
   }
 }
