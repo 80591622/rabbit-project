@@ -27,11 +27,19 @@
         <!-- 商品信息区 -->
         <div class="spec">
           <GoodName :good="goodData" />
+          <!-- 商品规格 -->
+          <Sku :goods="goodData" @change="skuChange"/>
+           <!-- 数据组件 -->
+          <XtxNumbox v-model="num"/>
+          <!-- 按钮组件 -->
+          <XtxButton type="primary" style="margin-top:20px;">加入购物车</XtxButton>
         </div>
       </div>
       <!-- 商品详情 -->
       <div class="goods-footer">
         <div class="goods-article">
+           <!-- 商品+评价 -->
+          <GoodTabs/>
           <!-- 商品+评价 -->
           <div class="goods-tabs"></div>
         </div>
@@ -49,14 +57,20 @@ import { useRoute } from 'vue-router'
 import GoodImage from './components/good-image.vue'
 import GoodSales from './components/good-sales.vue'
 import GoodName from './components/good-name.vue'
+import GoodTabs from './components/good-tabs'
+import Sku from './Sku'
 export default {
   name: 'XtxGoodsPage',
   components: {
     GoodImage,
     GoodSales,
-    GoodName
+    GoodName,
+    Sku,
+    GoodTabs
   },
   setup () {
+    // 商品数量
+    const num = ref(1)
     // 获取商品信息
     const route = useRoute()
     const goodData = ref({})
@@ -65,11 +79,16 @@ export default {
       console.log(res)
       goodData.value = res.result
     }
+    function skuChange (sku) {
+      console.log(sku)
+    }
     onMounted(() => {
       loadGoodData()
     })
     return {
-      goodData
+      goodData,
+      skuChange,
+      num
     }
   }
 }

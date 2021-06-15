@@ -22,6 +22,12 @@
       <XtxBreadItem to="/">首页</XtxBreadItem>
       <XtxBreadItem>导航</XtxBreadItem>
     </XtxBread>
+    <!-- 测试数量增减模块 -->
+    <XtxNumbox :max="4" :min="3" :modelValue="num"></XtxNumbox>
+    <!-- 测试加入购物车按钮 -->
+    <XtxButton type="primary" size="middle">测试按钮</XtxButton>
+    <!-- 测试图片选中状态 -->
+    <XtxCheckbox>是否有图</XtxCheckBox>
   </div>
 </template>
 <script>
@@ -32,6 +38,7 @@ export default {
     HomePanel
   },
   setup () {
+    const num = ref(1)
     const sliders = ref([
       {
         hrefUrl: '/#/',
@@ -47,7 +54,8 @@ export default {
       }
     ])
     return {
-      sliders
+      sliders,
+      num
     }
   }
 }

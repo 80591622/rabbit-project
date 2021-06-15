@@ -15,6 +15,12 @@ import BreadItem from './Bread/Item'
 import InfiniteLoad from './InfiniteLoad'
 // 城市组件
 import City from './City'
+// 商品详情数量增加模块
+import Nubmer from './Nubmer'
+// 商品详情页加入购物车按钮
+import Button from './Button'
+// 商品详情页是否有图选择框
+import CheckBox from './CheckBox'
 
 export default {
   install (app) {
@@ -29,5 +35,8 @@ export default {
     app.component(BreadItem.name, BreadItem)
     app.component(InfiniteLoad.name, InfiniteLoad)
     app.component(City.name, City)
+    app.component(Nubmer.name, Nubmer)
+    app.component(Button.name, Button)
+    app.component(CheckBox.name, CheckBox)
   }
 }
